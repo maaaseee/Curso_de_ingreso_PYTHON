@@ -27,7 +27,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        #snake case
+        nombre_alumno = "Federico"
+        alert("Datos" , nombre_alumno)
         
         
     
