@@ -46,7 +46,16 @@ class App(customtkinter.CTk):
         self.btn_tiempo_llegada.grid(row=4, pady=10, padx=30, columnspan=2, sticky="nsew")
     
     def btn_cantidad_camiones_on_click(self):
-        pass
+        toneladas = self.txt_toneladas.get()
+        
+        toneladas = float(toneladas)
+
+        pasaje_kilos = toneladas * 1000
+        calculo_camiones = pasaje_kilos // 3500
+
+        message = "Según la cantidad de toneladas ingresada, la cantidad de camiones necesaria para transportar los materiales es de: " + str(calculo_camiones)
+
+        alert("Cantidad de camiones" , message)
 
     def btn_tiempo_llegada_on_click(self):
         pass
