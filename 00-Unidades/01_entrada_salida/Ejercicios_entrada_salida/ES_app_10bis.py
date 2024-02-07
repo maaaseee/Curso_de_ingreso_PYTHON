@@ -29,19 +29,21 @@ class App(customtkinter.CTk):
         self.txt_importe = customtkinter.CTkEntry(master=self)
         self.txt_importe.grid(row=0, column=1)
 
-        self.label2 = customtkinter.CTkLabel(
-            master=self, text="% de Descuento")
+        self.label2 = customtkinter.CTkLabel(master=self, text="% de Descuento")
         self.label2.grid(row=1, column=0, padx=20, pady=10)
 
         self.txt_descuento = customtkinter.CTkEntry(master=self)
         self.txt_descuento.grid(row=1, column=1)
 
-        self.btn_mostrar = customtkinter.CTkButton(
-            master=self, text="Mostrar", command=self.btn_mostrar_on_click)
+        self.btn_mostrar = customtkinter.CTkButton(master=self, text="Mostrar", command=self.btn_mostrar_on_click)
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
+        importe = float(self.txt.importe.get())
+        desc = float(self.txt.descuento.get())
+        desc_final = desc / 100
+        cuenta = importe * (1 - desc_final)
+        alert("Descuento" , f"Luego del descuento, el precio del producto es de: {cuenta}")
 
 
 if __name__ == "__main__":
