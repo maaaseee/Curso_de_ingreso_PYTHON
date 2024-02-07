@@ -51,6 +51,9 @@ class App(customtkinter.CTk):
         
         alert("Descuento" , f"Luego del descuento, el precio del producto es de: {cuenta}")
 
+        self.txt_importe.delete(0, "end")
+        self.txt_descuento.delete(0, "end")
+
 
 if __name__ == "__main__":
     app = App()

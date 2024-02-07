@@ -45,6 +45,7 @@ class App(customtkinter.CTk):
 
         alert("Sueldo", f"Luego del aumento, su sueldo es de: " + str(cuenta3))
         
+        self.txt_sueldo.delete(0, "end")
     
 if __name__ == "__main__":
     app = App()

@@ -50,6 +50,9 @@ class App(customtkinter.CTk):
 
         alert("Resultado" , f"El resto de dividir {operador_a} por {operador_b} es: {div}")
 
+        self.txt_operador_a.delete(0, "end")
+        self.txt_operador_b.delete(0, "end")
+
     
 if __name__ == "__main__":
     app = App()

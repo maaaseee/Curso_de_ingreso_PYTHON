@@ -52,6 +52,9 @@ class App(customtkinter.CTk):
         #cuenta = sueldo * (1 + incr_decimal)
 
         alert("Aumento" , f"Luego del aumento, su sueldo es de: {cuenta}")
+
+        self.txt_sueldo.delete(0, "end")
+        self.txt_incremento.delete(0, "end")
         
     
 if __name__ == "__main__":
