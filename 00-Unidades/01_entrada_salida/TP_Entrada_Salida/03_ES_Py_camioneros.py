@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Federico Gustavo
+apellido: Aieta
 ---
 TP: ES_Camioneros
 ---
@@ -47,19 +47,36 @@ class App(customtkinter.CTk):
     
     def btn_cantidad_camiones_on_click(self):
         toneladas = self.txt_toneladas.get()
+        toneladas_float = float(toneladas)
+
+        pasaje_kilos = toneladas_float * 1000
         
-        toneladas = float(toneladas)
+        #calculo_camiones = pasaje_kilos // 3500
+        #calculo_camiones_2 = pasaje_kilos % 3500
 
-        pasaje_kilos = toneladas * 1000
-        calculo_camiones = pasaje_kilos // 3500
+        calculo_camiones_3 = round(pasaje_kilos / 3500 + 0.5)
+        
+        calculo_final = calculo_camiones_3
 
-        message = "Según la cantidad de toneladas ingresada, la cantidad de camiones necesaria para transportar los materiales es de: " + str(calculo_camiones)
+        message = f"Según la cantidad de toneladas ingresadas, la cantidad de camiones necesarias para transportar los materiales es de: {calculo_final}"
 
         alert("Cantidad de camiones" , message)
 
+        self.txt_toneladas.delete(0, "end")
+
     def btn_tiempo_llegada_on_click(self):
-        pass
-    
+        kilómetros = self.txt_kilometros.get()
+        kilómetros_float = float(kilómetros)
+        
+        calculo_horas = kilómetros_float / 90
+
+        sobrante_horas = kilómetros_float % 90
+
+        message = f"Según la cantidad de kilómetros ingresados, la cantidad de horas necesarias para que el camión llegue a destino es de: {calculo_horas} horas"
+
+        alert("Cantidad de horas" , message)
+
+        self.txt_kilometros.delete(0, "end")
     
 if __name__ == "__main__":
     app = App()

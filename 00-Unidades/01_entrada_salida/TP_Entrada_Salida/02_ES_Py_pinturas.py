@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Federico Gustavo
+apellido: Aieta
 ---
 TP: ES_Pinturas
 ---
@@ -50,12 +50,12 @@ class App(customtkinter.CTk):
     def btn_convertir_c_f_on_click(self):
         temperatura = self.txt_temperatura_c.get()
 
-        temperatura = float(temperatura)
+        temperatura_float = float(temperatura)
 
-        paso1_traspaso_temperatura = temperatura * 9/5
+        paso1_traspaso_temperatura = temperatura_float * 9/5
         paso2_traspaso_temperatura = paso1_traspaso_temperatura + 32
 
-        message = "Esta cantidad de grados Farenheit, equivale a: " + str(paso2_traspaso_temperatura) + " grados Celsius"
+        message = f"Esta cantidad de grados Celsius, equivale a: {paso2_traspaso_temperatura} grados Farenheit"
 
         alert("Conversión de temperatura" , message)
 
@@ -64,12 +64,12 @@ class App(customtkinter.CTk):
     def btn_convertir_f_c_on_click(self):
         temperatura = self.txt_temperatura_f.get()
 
-        temperatura = float(temperatura)
+        temperatura_float = float(temperatura)
 
-        paso1_traspaso_temperatura = temperatura - 32
+        paso1_traspaso_temperatura = temperatura_float - 32
         paso2_traspaso_temperatura = paso1_traspaso_temperatura * 5/9
 
-        message = "Esta cantidad de grados Celsius, equivale a: " + str(paso2_traspaso_temperatura) + " grados Farenheit"
+        message = f"Esta cantidad de grados Farenheit, equivale a: {paso2_traspaso_temperatura} grados Celsius"
 
         alert("Conversión de temperatura" , message)
 

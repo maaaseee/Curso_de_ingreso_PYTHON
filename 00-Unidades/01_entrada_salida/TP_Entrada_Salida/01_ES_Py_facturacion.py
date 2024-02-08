@@ -52,6 +52,7 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
+        
         producto_1 = self.txt_importe_1.get()
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
@@ -71,6 +72,7 @@ class App(customtkinter.CTk):
         self.txt_importe_3.delete(0, "end")
 
     def btn_promedio_on_click(self):
+
         producto_1 = self.txt_importe_1.get()
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
@@ -89,6 +91,7 @@ class App(customtkinter.CTk):
         self.txt_importe_3.delete(0, "end")
 
     def btn_total_iva_on_click(self):
+
         producto_1 = self.txt_importe_1.get()
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
