@@ -57,11 +57,11 @@ class App(customtkinter.CTk):
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
 
-        producto_1 = float(producto_1)
-        producto_2 = float(producto_2)
-        producto_3 = float(producto_3)
+        producto_1_float = float(producto_1)
+        producto_2_float = float(producto_2)
+        producto_3_float = float(producto_3)
 
-        suma = producto_1 + producto_2 + producto_3
+        suma = producto_1_float + producto_2_float + producto_3_float
 
         message = "El total, luego de sumar el precio de todos los productos, es " + str(suma)
 
@@ -77,11 +77,12 @@ class App(customtkinter.CTk):
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
 
-        producto_1 = float(producto_1)
-        producto_2 = float(producto_2)
-        producto_3 = float(producto_3)
+        producto_1_float = float(producto_1)
+        producto_2_float = float(producto_2)
+        producto_3_float = float(producto_3)
 
-        suma = producto_1 + producto_2 + producto_3
+        suma = producto_1_float + producto_2_float + producto_3_float
+        
         promedio = suma / 3
 
         alert("Promedio" , "El promedio, luego de sumar el precio de todos los productos, es " + str(promedio))
@@ -96,11 +97,12 @@ class App(customtkinter.CTk):
         producto_2 = self.txt_importe_2.get()
         producto_3 = self.txt_importe_3.get()
 
-        producto_1 = float(producto_1)
-        producto_2 = float(producto_2)
-        producto_3 = float(producto_3)
+        producto_1_float = float(producto_1)
+        producto_2_float = float(producto_2)
+        producto_3_float = float(producto_3)
 
-        suma = producto_1 + producto_2 + producto_3
+        suma = producto_1_float + producto_2_float + producto_3_float
+        
         precio_final = suma * 1.21
 
         alert("Total + IVA" , "El Total mas IVA, luego de sumar el precio de todos los productos, es " + str(precio_final))
