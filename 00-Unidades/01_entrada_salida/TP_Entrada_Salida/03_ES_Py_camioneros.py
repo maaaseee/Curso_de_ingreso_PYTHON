@@ -51,12 +51,7 @@ class App(customtkinter.CTk):
 
         pasaje_kilos = toneladas_float * 1000
         
-        #calculo_camiones = pasaje_kilos // 3500
-        #calculo_camiones_2 = pasaje_kilos % 3500
-
-        calculo_camiones_3 = round(pasaje_kilos / 3500 + 0.5)
-        
-        calculo_final = calculo_camiones_3
+        calculo_final = round(pasaje_kilos / 3500 + 0.5)
 
         message = f"Según la cantidad de toneladas ingresadas, la cantidad de camiones necesarias para transportar los materiales es de: {calculo_final}"
 
@@ -70,9 +65,7 @@ class App(customtkinter.CTk):
         
         calculo_horas = kilómetros_float / 90
 
-        sobrante_horas = kilómetros_float % 90
-
-        message = f"Según la cantidad de kilómetros ingresados, la cantidad de horas necesarias para que el camión llegue a destino es de: {calculo_horas} horas"
+        message = f"Según la cantidad de kilómetros ingresados, la cantidad de horas necesarias para que el camión llegue a destino es de: {round(calculo_horas, 1)} horas"
 
         alert("Cantidad de horas" , message)
 

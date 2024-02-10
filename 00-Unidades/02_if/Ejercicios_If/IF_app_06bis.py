@@ -28,7 +28,7 @@ class App(customtkinter.CTk):
 
         self.title("UTN FRA")
 
-        self.label1 = customtkinter.CTkLabel(master=self, text="Altura")
+        self.label1 = customtkinter.CTkLabel(master=self, text="Altura en cm")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
         
         self.txt_altura = customtkinter.CTkEntry(master=self)
@@ -39,7 +39,19 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        altura = self.txt_altura.get()
+        altura_float = float(altura)
+
+        if altura_float < 160:
+            mensaje = "El jugador pertenece a la posición de Base"
+        elif altura_float < 180:
+            mensaje = "El jugador pertenece a la posición de Escolta"
+        elif altura_float < 200:
+            mensaje = "El jugador pertenece a la posición de Alero"
+        else:
+            mensaje = "El jugador pertenece a la posición de Pívot/Ala-Pívot"
+
+        alert("Posición" , mensaje)
 
         
         
