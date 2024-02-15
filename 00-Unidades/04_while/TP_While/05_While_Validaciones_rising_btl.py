@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Federico Gustavo
+apellido: Aieta
 ---
 TP: While_validaciones_rising_btl
 ---
@@ -41,9 +41,8 @@ class App(customtkinter.CTk):
 
         self.label2 = customtkinter.CTkLabel(master=self, text="Estado")
         self.label2.grid(row=2, column=0, padx=20, pady=10)
-        self.combobox_tipo = customtkinter.CTkComboBox(
-            master=self, values=["Soltero/a", "Casado/a", "Divorciado/a", "Viudo/a"])
-        self.combobox_tipo.grid(row=2, column=1, padx=20, pady=10)
+        self.txt_tipo = customtkinter.CTkEntry(master=self)
+        self.txt_tipo.grid(row=2, column=1, padx=20, pady=10)
 
         self.label3 = customtkinter.CTkLabel(master=self, text="Legajo")
         self.label3.grid(row=3, column=0, padx=20, pady=10)
