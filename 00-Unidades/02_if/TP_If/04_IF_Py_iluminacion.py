@@ -52,19 +52,27 @@ class App(customtkinter.CTk):
 
         valor_de_descuento = 0
         
-        if cantidad_int == 3:
-            if marca == "ArgentinaLuz":
-                valor_de_descuento = 0.15
+        if cantidad_int >= 6:
+            valor_de_descuento = 0.50
+        elif cantidad_int == 5:
+            if (marca == "ArgentinaLuz"):
+                valor_de_descuento = 0.60
             else:
-                if cantidad_int == 3 and marca == "FelipeLamparas":
-                    valor_de_descuento = 0.10
-                else:
-                    valor_de_descuento = 0.05
+                valor_de_descuento = 0.70
+        elif cantidad_int == 4:
+            if (marca == "ArgentinaLuz") or (marca == "FelipeLamparas"):
+                valor_de_descuento = 0.75
+            else:
+                valor_de_descuento = 0.80
+        elif cantidad_int == 3:
+            if (marca == "ArgentinaLuz"):
+                valor_de_descuento = 0.85
+            elif (marca == "FelipeLamparas"):
+                valor_de_descuento = 0.90
+            else:
+                valor_de_descuento = 0.95
 
-
-        descuento_total = precio_final * valor_de_descuento
-
-        valor_total = precio_final - descuento_total
+        valor_total = precio_final * valor_de_descuento
 
         if valor_total > 4000:
             valor_total = valor_total * 0.95

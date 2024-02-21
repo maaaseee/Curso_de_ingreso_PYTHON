@@ -43,7 +43,45 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        pass
+        marca = self.combobox_marca.get()
+        cantidad = self.combobox_cantidad.get()
+        cantidad_int = int(cantidad)
+
+        subtotal = 800 * cantidad_int
+        descuento = 0
+
+        match cantidad_int:
+            case 6 | 7 | 8 | 9 | 10 | 11 | 12:
+                descuento = 0.50
+            case 5:
+                match marca:
+                    case "ArgentinaLuz":
+                        descuento = 0.60
+                    case _:
+                        descuento = 0.70
+            case 4:
+                match marca:
+                    case "ArgentiaLuz" | "FelipeLamparas":
+                        descuento = 0.75
+                    case _:
+                        descuento = 0.80
+            case 3:
+                match marca:
+                    case "ArgentinaLuz":
+                        descuento = 0.85
+                    case "FelipeLamparas":
+                        descuento = 0.90
+                    case _:
+                        descuento = 0.95
+        
+        total = subtotal * descuento
+
+        if total > 4000:
+            total = total * 0.95
+
+        alert("Total" , f"El precio final de su factura es de: ${total}")
+
+
         
     
 if __name__ == "__main__":

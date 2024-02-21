@@ -52,8 +52,6 @@ class App(customtkinter.CTk):
 
         alert("Estado" , mensaje)
 
-        
-        
     
 if __name__ == "__main__":
     app = App()

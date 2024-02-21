@@ -38,7 +38,7 @@ class App(customtkinter.CTk):
         
         self.txt_kilometros = customtkinter.CTkEntry(master=self)
         self.txt_kilometros.grid(row=1, column=1)
-       
+        
         self.btn_cantidad_camiones = customtkinter.CTkButton(master=self, text="Calcular cantidad de camiones", command=self.btn_cantidad_camiones_on_click)
         self.btn_cantidad_camiones.grid(row=3, pady=10, padx=30 ,columnspan=2, sticky="nsew")
         

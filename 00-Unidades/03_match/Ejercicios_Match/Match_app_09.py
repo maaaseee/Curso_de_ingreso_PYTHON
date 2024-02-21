@@ -47,7 +47,7 @@ class App(customtkinter.CTk):
         
         self.label_destinos = customtkinter.CTkLabel(master=self, text="Destinos")
         self.label_destinos.grid(row=2, column=0, padx=20, pady=10)
-        destinos = ['Bariloche', 'Mar del plata', 'Cataratas', 'Cordoba']
+        destinos = ['Bariloche', 'Mar del plata', 'Cataratas', 'Córdoba']
         self.combobox_destino = customtkinter.CTkComboBox(master=self, values=destinos)
         self.combobox_destino.grid(row=3, column=0, padx=20, pady=(10, 10))
 
@@ -57,8 +57,39 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
-            
+        estacion = self.combobox_estaciones.get()
+        destino = self.combobox_destino.get()
+
+        estadia = 15000
+
+        match estacion:
+            case "Invierno":
+                match destino:
+                    case "Bariloche":
+                        cuenta = estadia * 1.20
+                    case "Cataratas" | "Córdoba":
+                        cuenta = estadia * 1.10
+                    case _:
+                        cuenta = estadia * 0.80
+                
+            case "Verano":
+                match destino:
+                    case "Bariloche":
+                        cuenta = estadia * 0.80
+                    case "Mar del plata":
+                        cuenta = estadia * 1.20
+                    case _:
+                        cuenta = estadia * 1.10
+            case _:
+                match destino:
+                    case "Córdoba":
+                        cuenta = estadia
+                    case _:
+                        cuenta = estadia * 1.10
+        
+        alert("Estadía" , f"El valor total de su estadía es de : ${cuenta}")
+
+        
     
 if __name__ == "__main__":
     app = App()

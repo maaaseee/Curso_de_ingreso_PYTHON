@@ -39,12 +39,12 @@ class App(customtkinter.CTk):
         suma = 0
 
         while contador <= 10:
+            contador += 1
             if contador % 2 == 0:
                 suma += contador
-
-            contador += 1
             
-            alert("" , suma)
+
+        alert("" , suma)
     
     
 if __name__ == "__main__":
