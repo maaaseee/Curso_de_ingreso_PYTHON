@@ -32,7 +32,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        cantidad_repeticiones = self.txt_repetir.get()
+        cantidad_repeticiones = int(cantidad_repeticiones)
+
+        for repetir_utn in range(cantidad_repeticiones):
+            alert("", "Hola UTN FRA")
 
         
     

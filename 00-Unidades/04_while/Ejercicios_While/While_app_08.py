@@ -42,9 +42,8 @@ class App(customtkinter.CTk):
 
         while True:
             numero = prompt("Ingreso" , "Ingrese un número")
-            
 
-            if numero is None:
+            if numero == None:
                 break
             else:
                 numero = int(numero)

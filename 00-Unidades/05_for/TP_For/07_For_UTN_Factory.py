@@ -46,7 +46,11 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
+        
+        for postulantes in range(1, 11):
+            edad = input("Ingresar su edad: ")
+            edad = int(edad)
+            
 
 
 if __name__ == "__main__":

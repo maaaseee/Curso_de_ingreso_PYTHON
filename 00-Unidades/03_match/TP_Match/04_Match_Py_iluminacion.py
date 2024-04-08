@@ -73,6 +73,8 @@ class App(customtkinter.CTk):
                         descuento = 0.90
                     case _:
                         descuento = 0.95
+            case _:
+                descuento = 1
         
         total = subtotal * descuento
 
@@ -80,7 +82,6 @@ class App(customtkinter.CTk):
             total = total * 0.95
 
         alert("Total" , f"El precio final de su factura es de: ${total}")
-
 
         
     

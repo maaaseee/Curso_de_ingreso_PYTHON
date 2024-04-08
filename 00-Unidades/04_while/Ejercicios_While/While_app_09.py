@@ -60,7 +60,10 @@ class App(customtkinter.CTk):
                 bandera_primer_ingreso = True
 
         
-        print("" , f"el maximo es de {maximo}, y el minimo es de {minimo}")
+        self.txt_maximo.delete(0, "end")
+        self.txt_maximo.insert(0, maximo)
+        self.txt_minimo.delete(0, "end")
+        self.txt_minimo.insert(0, minimo)
 
 
 if __name__ == "__main__":

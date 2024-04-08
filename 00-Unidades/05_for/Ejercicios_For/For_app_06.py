@@ -27,8 +27,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        contador_divisores = 0
+
+        numero = prompt("Número", "Ingrese un numero para empezar")
+        numero = int(numero)
+
+        for rango in range(1, numero + 1):
+            if numero % rango == 0:
+                print(rango)
+                contador_divisores += 1
         
+        print(f"Se encontró {contador_divisores} divisor/es")
     
 if __name__ == "__main__":
     app = App()

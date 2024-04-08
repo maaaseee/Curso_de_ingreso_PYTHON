@@ -9,7 +9,7 @@ import customtkinter
 nombre: Federico Gustavo
 apellido: Aieta
 ---
-Ejercicio: while_10
+Ejercicio: while_practica_clase
 ---
 UTN Tecnologies, una reconocida software factory se encuentra en la busqueda de ideas para su proximo desarrollo en python, 
 que promete revolucionar el mercado. 
@@ -89,7 +89,6 @@ class App(customtkinter.CTk):
 
             lista += f"{nombre} - {edad} - {genero} - {tecnologia}\n"
             
-                
             match tecnologia:
                 case "IA":
                     contador_IA += 1
@@ -147,7 +146,8 @@ class App(customtkinter.CTk):
 
         alert("", f"Cantidad de empleados que votaron IOT u IA de entre 25 a 50 años: {contador_Masculino_IOT_IA}.")
         alert("", f"{mensaje_mas_votado}")
-        alert("", f"{porcentaje_masculinos}% que votó fueron del género masculino, otro {porcentaje_femeninos}% que votó fue del género femenino, y el otro {porcentaje_genero_otro}% que votó fue del genero otro.")
+        alert("", f"{porcentaje_masculinos}% que votó fueron del género masculino, otro {porcentaje_femeninos}% que votó fue del género \
+                femenino, y el otro {porcentaje_genero_otro}% que votó fue del genero otro.")
         alert("", f"El {round(porcentaje_iot_rango, 2)}% de los encuestados de edad entre los 18 y 25, o 33 a 42 años, votaron por la tecnología IOT.")
         alert("", f"El promedio de edad de las encuestadas que votaron por IA es de {promedio_edades_ia_femenino}.")
         alert("", f"{nombre_minima_edad}, de género {genero_minima_edad} es el encuestado más joven que votó por RV/RA.")

@@ -26,9 +26,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-       
-            
+        for rango in range(5, 0, -1):
+            alert("", f"{rango}")
+        
+
 
 if __name__ == "__main__":
     app = App()

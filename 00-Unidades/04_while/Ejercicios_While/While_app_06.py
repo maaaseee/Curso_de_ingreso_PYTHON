@@ -49,7 +49,9 @@ class App(customtkinter.CTk):
 
         promedio = acumulador_numeros / contador_iteracion
 
+        self.txt_suma_acumulada.delete(0, "end")
         self.txt_suma_acumulada.insert(0, acumulador_numeros)
+        self.txt_promedio.delete(0, "end")
         self.txt_promedio.insert(0, promedio)
 
     

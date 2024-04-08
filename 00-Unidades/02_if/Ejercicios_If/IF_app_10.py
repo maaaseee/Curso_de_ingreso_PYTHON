@@ -35,7 +35,7 @@ class App(customtkinter.CTk):
         nota = random.randint(1, 10)
         
         if nota < 4:
-            mensaje = f"Su nota es de {nota}, por lo tanto, ha desaprobado"
+            mensaje = f"Su nota es de {nota}, por lo tanto, ha desaprobado" 
         elif nota < 6:
             mensaje = f"Su nota es de {nota}, y por lo tanto, aprobó"
         else:

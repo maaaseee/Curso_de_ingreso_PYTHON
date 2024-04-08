@@ -36,14 +36,6 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
-        '''valor = prompt("lalal" , "Ingrese")
-
-        if valor == None:
-            alert("" , "NONE")
-        else:
-            valor = int(valor)
-            if valor == 4:
-                alert("" , "Valor")'''
         
         contador_iteracion = 0
         acumulador_numeros = 0
@@ -57,18 +49,16 @@ class App(customtkinter.CTk):
 
             numero = int(numero)
 
-            acumulador_numeros = numero + acumulador_numeros
+            acumulador_numeros += numero
 
             contador_iteracion += 1
 
         promedio = acumulador_numeros / contador_iteracion
 
+        self.txt_suma_acumulada.delete(0, "end")
         self.txt_suma_acumulada.insert(0, acumulador_numeros)
+        self.txt_promedio.delete(0, "end")
         self.txt_promedio.insert(0, promedio)
-
-
-
-
 
     
 if __name__ == "__main__":

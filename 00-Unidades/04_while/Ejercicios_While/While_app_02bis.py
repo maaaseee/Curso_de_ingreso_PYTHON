@@ -38,7 +38,7 @@ class App(customtkinter.CTk):
         contador = 1
         suma = 0
 
-        while contador <= 10:
+        while contador < 10:
             contador += 1
             if contador % 2 == 0:
                 suma += contador
